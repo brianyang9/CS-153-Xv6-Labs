@@ -104,7 +104,7 @@ int             pipewrite(struct pipe*, char*, int);
 //PAGEBREAK: 16
 // proc.c
 int             cpuid(void);
-void            exit(void);
+void            exit(int);       // adding a parameter data type for lab 1 
 int             fork(void);
 int             growproc(int);
 int             kill(int);

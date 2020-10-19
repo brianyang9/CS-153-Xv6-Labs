@@ -16,7 +16,13 @@ sys_fork(void)
 int
 sys_exit(void)
 {
-  exit();
+  // change this for lab 1
+  int exit_status;
+  if(argint(0, &exit_status)<0){
+    return -1;
+  }
+ 
+  exit(exit_status);
   return 0;  // not reached
 }
 
