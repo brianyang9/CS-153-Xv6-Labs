@@ -17,12 +17,13 @@ int
 sys_exit(void)
 {
   // change this for lab 1
-  int exit_status;
-  if(argint(0, &exit_status)<0){
+  int status;
+
+  if(argint(0, &status)<0){
     return -1;
   }
  
-  exit(exit_status);
+  exit(status);
   return 0;  // not reached
 }
 
