@@ -30,7 +30,14 @@ sys_exit(void)
 int
 sys_wait(void)
 {
-  return wait();
+ // lab 1 part2
+  int *status;
+
+  if(argint(0, &status)<0){
+    return -1;
+  }
+ 
+  return wait(status);
 }
 
 int
